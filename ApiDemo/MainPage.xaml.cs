@@ -55,6 +55,8 @@ namespace ApiDemo
         }
         private async void previousImageButton_Click(object sender, RoutedEventArgs e)
         {
+            comicImage.Visibility = Visibility.Visible;
+            sunInfo.Visibility = Visibility.Collapsed;
             if (currentNumber > 1)
             {
                 currentNumber -= 1;
@@ -70,6 +72,8 @@ namespace ApiDemo
 
         private async void nextImageButton_Click(object sender, RoutedEventArgs e)
         {
+            comicImage.Visibility = Visibility.Visible;
+            sunInfo.Visibility = Visibility.Collapsed;
             if (currentNumber < maxNumber)
             {
                 currentNumber += 1;
@@ -81,6 +85,20 @@ namespace ApiDemo
                     nextImageButton.IsEnabled = false;
                 }
             }
+        }
+
+        private void SunInformationButton_Click(object sender, RoutedEventArgs e)
+        {
+            comicImage.Visibility = Visibility.Collapsed;
+            sunInfo.Visibility = Visibility.Visible;
+
+        }
+
+        private async void LoadSunInfo_Click(object sender, RoutedEventArgs e)
+        {
+            var sunInformation = await SunProcessor.LoadSunInformation();
+            sunriseText.Text = $"Sunrise is at { sunInformation.Sunrise.ToLocalTime().ToShortTimeString() } ";
+            sunsetText.Text = $"Sunset is at { sunInformation.Sunset.ToLocalTime().ToShortTimeString() } ";
         }
     }
 }

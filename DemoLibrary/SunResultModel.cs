@@ -8,5 +8,7 @@ namespace DemoLibrary
 {
     class SunResultModel
     {
+        public SunModel Results { get; set; }
+
     }
 }
