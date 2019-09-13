@@ -53,7 +53,7 @@ namespace ApiDemo
         {
             await LoadImage();
         }
-        private async void previousImageButton_Click(object sender, RoutedEventArgs e)
+        private async void PreviousImageButton_Click(object sender, RoutedEventArgs e)
         {
             comicImage.Visibility = Visibility.Visible;
             sunInfo.Visibility = Visibility.Collapsed;
@@ -70,7 +70,7 @@ namespace ApiDemo
             }
         }
 
-        private async void nextImageButton_Click(object sender, RoutedEventArgs e)
+        private async void NextImageButton_Click(object sender, RoutedEventArgs e)
         {
             comicImage.Visibility = Visibility.Visible;
             sunInfo.Visibility = Visibility.Collapsed;
