@@ -150,15 +150,15 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNet.WebApi.Client">
-      <Version>5.2.7</Version>
-    </PackageReference>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.2.9</Version>
     </PackageReference>
-    <PackageReference Include="Newtonsoft.Json">
-      <Version>12.0.2</Version>
-    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DemoLibrary\DemoLibrary.csproj">
+      <Project>{a12fc793-28ab-46c9-844d-77a26895a74f}</Project>
+      <Name>DemoLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
