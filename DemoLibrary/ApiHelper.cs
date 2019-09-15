@@ -18,7 +18,7 @@ namespace DemoLibrary
             //ApiClient.BaseAddress = new Uri("http://xkcd.com/"); Not doing this as we are going to use the same httpclient for more than one base address
             ApiClient.DefaultRequestHeaders.Accept.Clear();
             ApiClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-            //ApiClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", "Your Oauth token");
+            // ApiClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", "Your Oauth token");
         }
     }
 }
